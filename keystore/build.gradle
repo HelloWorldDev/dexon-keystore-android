@@ -28,5 +28,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.github.walleth.kethereum:bip39:0.66'
+    implementation 'com.github.walleth.kethereum:bip39_wordlist_en:0.66'
+    implementation 'com.github.walleth.kethereum:crypto:0.66'
+    implementation 'com.github.walleth.kethereum:wallet:0.66'
     testImplementation 'junit:junit:4.12'
 }
