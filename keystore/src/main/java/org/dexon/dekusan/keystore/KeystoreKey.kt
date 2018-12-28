@@ -1,9 +1,6 @@
 package org.dexon.dekusan.keystore
 
-import com.google.gson.GsonBuilder
-import com.google.gson.JsonDeserializationContext
-import com.google.gson.JsonDeserializer
-import com.google.gson.JsonElement
+import com.google.gson.*
 import org.kethereum.bip39.dirtyPhraseToMnemonicWords
 import org.kethereum.bip39.generateMnemonic
 import org.kethereum.bip39.wordlists.WORDLIST_ENGLISH
@@ -115,6 +112,19 @@ class KeystoreKey {
         )
     }
 
+    fun toJson(): String = GsonBuilder()
+        .registerTypeAdapter(Address::class.java, AddressSerializer())
+        .create()
+        .toJson(this)
+
+}
+
+class AddressSerializer: JsonSerializer<Address> {
+    override fun serialize(
+        src: Address,
+        typeOfSrc: Type?,
+        context: JsonSerializationContext?
+    ): JsonElement = JsonPrimitive(src.hex)
 }
 
 class AddressDeserializer : JsonDeserializer<Address> {
