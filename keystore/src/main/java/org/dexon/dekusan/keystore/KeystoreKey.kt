@@ -71,20 +71,22 @@ class KeystoreKey {
     }
 
     // Initializes a `Key` from a JSON wallet.
-    constructor(uri: URI) {
-        val file = File(uri.path)
-        val gson = GsonBuilder()
+    constructor(uri: URI) : this(JsonParser().parse(FileReader(File(uri.path))))
+
+    // Initializes a `Key` from a JSON element.
+    constructor(json: JsonElement) {
+        GsonBuilder()
             .registerTypeAdapter(Address::class.java, AddressDeserializer())
             .create()
-        gson.fromJson(FileReader(file), this::class.java).let {
-            this.type = if (it.type == null) WalletType.PRIVATE_KEY else it.type
-            this.id = it.id
-            this.address = it.address
-            this.crypto = it.crypto
-            this.version = it.version
-            this.coin = it.coin
-            this.activeAccounts = it.activeAccounts ?: listOf()
-        }
+            .fromJson(json, this::class.java).let {
+                this.type = if (it.type == null) WalletType.PRIVATE_KEY else it.type
+                this.id = it.id
+                this.address = it.address
+                this.crypto = it.crypto
+                this.version = it.version
+                this.coin = it.coin
+                this.activeAccounts = it.activeAccounts ?: listOf()
+            }
     }
 
     // Decrypts the key and returns the decrypted data.

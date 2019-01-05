@@ -1,6 +1,6 @@
 package org.dexon.dekusan.keystore
 
-import com.google.gson.Gson
+import com.google.gson.JsonParser
 import org.kethereum.bip39.dirtyPhraseToMnemonicWords
 import org.kethereum.bip39.validate
 import org.kethereum.bip39.wordlists.WORDLIST_ENGLISH
@@ -48,7 +48,7 @@ class Keystore(val keyDirectory: File) {
 
     // Imports an encrypted JSON key.
     fun import(json: String, password: String, newPassword: String, coin: CoinType): Wallet {
-        val key = Gson().fromJson(json, KeystoreKey::class.java)
+        val key = KeystoreKey(JsonParser().parse(json))
         val data = key.decrypt(password)
         return when (key.type) {
             WalletType.PRIVATE_KEY -> {
