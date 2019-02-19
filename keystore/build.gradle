@@ -32,6 +32,7 @@ dependencies {
     implementation 'com.github.walleth.kethereum:bip39_wordlist_en:0.66'
     implementation 'com.github.walleth.kethereum:crypto:0.66'
     implementation 'com.github.walleth.kethereum:wallet:0.66'
+    api 'com.github.dexon-foundation:dekusan-core-android:0.1.0'
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
     testImplementation 'junit:junit:4.12'
 }

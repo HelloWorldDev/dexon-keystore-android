@@ -3,7 +3,6 @@ package org.dexon.dekusan.keystore
 import org.kethereum.bip39.dirtyPhraseToMnemonicWords
 import org.kethereum.bip39.toKey
 import org.kethereum.crypto.model.PrivateKey
-import org.kethereum.crypto.toAddress
 import org.kethereum.crypto.toECKeyPair
 import java.net.URI
 
