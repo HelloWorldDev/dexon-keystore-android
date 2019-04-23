@@ -4,8 +4,8 @@ import com.google.gson.*
 import org.kethereum.bip39.dirtyPhraseToMnemonicWords
 import org.kethereum.bip39.generateMnemonic
 import org.kethereum.bip39.wordlists.WORDLIST_ENGLISH
-import org.kethereum.crypto.model.PRIVATE_KEY_SIZE
-import org.kethereum.crypto.model.PrivateKey
+import org.kethereum.model.PRIVATE_KEY_SIZE
+import org.kethereum.model.PrivateKey
 import org.kethereum.extensions.toBytesPadded
 import org.dexon.dekusan.core.model.Address
 import org.kethereum.wallet.model.CipherException

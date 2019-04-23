@@ -24,15 +24,27 @@ repositories {
     mavenCentral()
 }
 
+project.ext {
+    kethereum_version = "0.74.9"
+    svalinn_version = "v0.8.0"
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'com.github.walleth.kethereum:bip39:0.66'
-    implementation 'com.github.walleth.kethereum:bip39_wordlist_en:0.66'
-    implementation 'com.github.walleth.kethereum:crypto:0.66'
-    implementation 'com.github.walleth.kethereum:wallet:0.66'
-    api 'com.github.dexon-foundation:dekusan-core-android:0.1.0'
+    implementation "com.github.walleth.kethereum:bip32:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:bip39:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:bip39_wordlist_en:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:crypto:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:crypto_api:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:crypto_impl_bouncycastle:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:wallet:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:model:$project.kethereum_version"
+//    implementation "com.github.walleth.kethereum:rlp:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:keccak_shortcut:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:extensions:$project.kethereum_version"
+    implementation 'com.github.dexon-foundation:dekusan-core-android:0.1.4'
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
     testImplementation 'junit:junit:4.12'
 }

@@ -2,10 +2,10 @@ package org.dexon.dekusan.keystore
 
 import org.dexon.dekusan.core.model.Address
 import org.kethereum.crypto.api.ec.CurvePoint
-import org.kethereum.crypto.model.*
 import org.kethereum.crypto.publicKeyFromPrivate
 import org.kethereum.extensions.toHexStringZeroPadded
 import org.kethereum.keccakshortcut.keccak
+import org.kethereum.model.*
 import org.walleth.khex.hexToByteArray
 import org.walleth.khex.toHexString
 import java.math.BigInteger

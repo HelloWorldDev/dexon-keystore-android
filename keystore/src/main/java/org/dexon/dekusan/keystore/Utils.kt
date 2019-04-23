@@ -1,10 +1,10 @@
 package org.dexon.dekusan.keystore
 
+import org.kethereum.crypto.CryptoAPI
 import org.kethereum.crypto.SecureRandomUtils
 import org.kethereum.keccakshortcut.keccak
 import org.kethereum.wallet.model.CipherException
 import org.kethereum.wallet.model.ScryptKdfParams
-import org.spongycastle.crypto.generators.SCrypt
 import org.walleth.khex.hexToByteArray
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
@@ -19,7 +19,7 @@ object Utils {
 
     @JvmStatic
     fun generateDerivedScryptKey(password: ByteArray, kdfParams: ScryptKdfParams): ByteArray =
-        SCrypt.generate(
+        CryptoAPI.scrypt.derive(
             password,
             kdfParams.salt?.hexToByteArray(),
             kdfParams.n,

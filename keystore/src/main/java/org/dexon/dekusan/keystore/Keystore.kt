@@ -4,7 +4,7 @@ import com.google.gson.JsonParser
 import org.kethereum.bip39.dirtyPhraseToMnemonicWords
 import org.kethereum.bip39.validate
 import org.kethereum.bip39.wordlists.WORDLIST_ENGLISH
-import org.kethereum.crypto.model.PrivateKey
+import org.kethereum.model.PrivateKey
 import java.io.File
 import java.net.URI
 import java.text.SimpleDateFormat
