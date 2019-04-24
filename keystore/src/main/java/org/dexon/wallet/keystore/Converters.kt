@@ -1,4 +1,4 @@
-package org.dexon.dekusan.keystore
+package org.dexon.wallet.keystore
 
 import org.dexon.wallet.core.model.Address
 import org.kethereum.crypto.api.ec.CurvePoint

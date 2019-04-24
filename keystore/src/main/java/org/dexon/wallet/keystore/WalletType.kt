@@ -1,4 +1,4 @@
-package org.dexon.dekusan.keystore
+package org.dexon.wallet.keystore
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,4 +1,4 @@
-package org.dexon.dekusan.keystore
+package org.dexon.wallet.keystore
 
 class DerivationPath {
 

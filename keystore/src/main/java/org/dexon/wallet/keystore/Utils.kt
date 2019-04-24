@@ -1,4 +1,4 @@
-package org.dexon.dekusan.keystore
+package org.dexon.wallet.keystore
 
 import org.kethereum.crypto.CryptoAPI
 import org.kethereum.crypto.SecureRandomUtils

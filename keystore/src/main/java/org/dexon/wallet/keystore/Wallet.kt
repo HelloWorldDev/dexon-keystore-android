@@ -1,4 +1,4 @@
-package org.dexon.dekusan.keystore
+package org.dexon.wallet.keystore
 
 import org.kethereum.bip39.dirtyPhraseToMnemonicWords
 import org.kethereum.bip39.toKey
