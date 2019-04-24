@@ -7,7 +7,7 @@ import org.kethereum.bip39.wordlists.WORDLIST_ENGLISH
 import org.kethereum.model.PRIVATE_KEY_SIZE
 import org.kethereum.model.PrivateKey
 import org.kethereum.extensions.toBytesPadded
-import org.dexon.dekusan.core.model.Address
+import org.dexon.wallet.core.model.Address
 import org.kethereum.wallet.model.CipherException
 import org.walleth.khex.hexToByteArray
 import org.walleth.khex.toNoPrefixHexString

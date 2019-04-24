@@ -1,7 +1,7 @@
 package org.dexon.dekusan.keystore
 
 import com.google.gson.annotations.SerializedName
-import org.dexon.dekusan.core.model.Address
+import org.dexon.wallet.core.model.Address
 import org.kethereum.bip39.dirtyPhraseToMnemonicWords
 import org.kethereum.bip39.toKey
 import org.kethereum.crypto.signMessageHash
