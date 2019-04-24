@@ -26,7 +26,6 @@ repositories {
 
 project.ext {
     kethereum_version = "0.74.9"
-    svalinn_version = "v0.8.0"
 }
 
 dependencies {
@@ -41,9 +40,9 @@ dependencies {
     implementation "com.github.walleth.kethereum:crypto_impl_bouncycastle:$project.kethereum_version"
     implementation "com.github.walleth.kethereum:wallet:$project.kethereum_version"
     implementation "com.github.walleth.kethereum:model:$project.kethereum_version"
-//    implementation "com.github.walleth.kethereum:rlp:$project.kethereum_version"
     implementation "com.github.walleth.kethereum:keccak_shortcut:$project.kethereum_version"
     implementation "com.github.walleth.kethereum:extensions:$project.kethereum_version"
+    implementation "com.github.walleth.kethereum:hashes:$project.kethereum_version"
     implementation 'com.github.dexon-foundation:dekusan-core-android:0.1.4'
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
     testImplementation 'junit:junit:4.12'

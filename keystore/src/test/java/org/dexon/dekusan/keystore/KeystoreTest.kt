@@ -8,7 +8,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.ExpectedException
 import org.junit.rules.TemporaryFolder
-import org.kethereum.crypto.model.PrivateKey
+import org.kethereum.model.PrivateKey
 import org.walleth.khex.hexToByteArray
 import java.io.File
 

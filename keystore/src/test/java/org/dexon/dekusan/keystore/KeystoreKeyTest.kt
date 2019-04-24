@@ -7,8 +7,8 @@ import org.junit.rules.ExpectedException
 import org.kethereum.bip39.dirtyPhraseToMnemonicWords
 import org.kethereum.bip39.generateMnemonic
 import org.kethereum.bip39.wordlists.WORDLIST_ENGLISH
-import org.kethereum.crypto.model.PrivateKey
 import org.kethereum.extensions.toHexStringNoPrefix
+import org.kethereum.model.PrivateKey
 import org.kethereum.wallet.model.CipherException
 import org.walleth.khex.hexToByteArray
 

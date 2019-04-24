@@ -6,8 +6,8 @@ import org.junit.Test
 import org.junit.rules.ExpectedException
 import org.kethereum.bip39.dirtyPhraseToMnemonicWords
 import org.kethereum.bip39.toKey
-import org.kethereum.crypto.model.PrivateKey
 import org.kethereum.hashes.sha256
+import org.kethereum.model.PrivateKey
 import org.walleth.khex.hexToByteArray
 import java.net.URI
 
