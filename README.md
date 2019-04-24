@@ -6,13 +6,13 @@
 
 ```
 allprojects {
-	repositories {
-		jcenter()
-		maven { url "https://jitpack.io" }
-	}
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
 }
 
 dependencies {
-	implementation "com.github.dexon-foundation:dexon-keystore-android:$version"
+    implementation "com.github.dexon-foundation:dexon-keystore-android:$version"
 }
 ```
